@@ -450,7 +450,7 @@ ul {
 
 .showcase {
 	padding: 302px 0 214px 0;
-	background: url('../images/showcase.webp') no-repeat;
+	background: url('../images/showcase.webp') no-repeat center/cover;
 	background-size: cover;
 	background-position: center;
 	position: relative;
@@ -458,7 +458,7 @@ ul {
 
 .showcase--mini {
 	padding: 214px 0 214px 0;
-	background: url('../images/yur.jpg') no-repeat;
+	background: url('../images/yur.jpg') no-repeat center/cover;
 }
 
 @media screen and (max-width: 767px) {
@@ -2083,11 +2083,11 @@ button.mfp-close {
 
 /* PROTECTION */
 
-.company--mini-margins .company__info:last-of-type {
+.company--mini-margins .company__info:last-child {
 	margin-bottom: 0;
 }
 
-.company--mini-margins .company__info:not(:last-of-type) {
+.company--mini-margins .company__info:not(:last-child) {
 	margin-bottom: 25px;
 }
 
@@ -2163,6 +2163,21 @@ button.mfp-close {
 	}
 }
 
+.showcase__btns-title {
+	font-family: 'Orchidea Pro', Arial, sans-serif;
+}
+
+.showcase__btns-title {
+	font-weight: bold;
+	font-size: 24px;
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.showcase__block-btns {
+  align-items: start;
+}
+
 @media (max-width: 430px) {
 	.protection .showcase .container {
 		padding: 0 10px;
@@ -2185,6 +2200,9 @@ button.mfp-close {
 	.protection .work__head {
 		font-size: 16px;
 	}
+	.showcase__btns-title {
+		font-size: 22px;
+	}
 }
 
 @media (max-width: 370px) {
@@ -2205,23 +2223,22 @@ button.mfp-close {
 	}
 }
 
+@media (max-width: 767px) {
+  .showcase__block-btns {
+    align-items: center;
+  }
+}
+
 .protection .showcase__block {
 	max-width: 620px;
 }
 
 .showcase__block-btns {
-	display: flex;
+	display: inline-flex;
 	justify-content: center;
 	flex-direction: column;
-	align-items: center;
-}
-
-.showcase__btns-title {
-	margin-top: 80px;
-	font-weight: bold;
-	font-size: 24px;
-	margin-bottom: 15px;
-	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 70px;
 }
 
 .protection .company {
@@ -2251,6 +2268,26 @@ button.mfp-close {
 	color: #000;
 }
 
+.company--mini-margins a.company__btn:hover {
+	color: #fff;
+}
+
+.company--mini-margins a.company__btn {
+	color: #fff;
+}
+
+[class$='--false'] {
+	display: none;
+}
+._dn {
+	display: none !important;
+}
+
+.price__text--margin-top {
+	margin-top: 50px;
+	margin-bottom: 0;
+}
+
 /* SCROLLBAR */
 *::-webkit-scrollbar {
 	width: 12px; /* ширина scrollbar */
@@ -2270,3 +2307,5 @@ button.mfp-close {
 *::-webkit-scrollbar-thumb:active {
 	background-color: #727272;
 }
+
+/* http://zero2one.ru/wp-content/player/playerjs.js */

@@ -16,8 +16,6 @@
   <meta name="robots" content="index, follow">
 
   <link rel="shortcut icon" type="image/png" href="images/favicon.svg">
-
-  <link href="libs/animsition.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="libs/magnific-popup.css">
   <link rel="stylesheet" href="css/style.css">
 
@@ -102,7 +100,16 @@
           <h1 class="showcase__title">
             Защита прав потребителей: действуем в интересах покупателей и продавцов
           </h1>
-          <div class="showcase__info showcase__info--large">
+          <div class="showcase__block-btns">
+            <p class="showcase__btns-title">
+              Вы потребитель или продавец?
+            </p>
+            <div class="showcase__btns-wrapper">
+              <button class="showcase__btn" data-content="1">Я потребитель</button>
+              <button class="showcase__btn" data-content="2">Я продавец</button>
+            </div>
+          </div>
+          <div class="showcase__info showcase__info--large _dn">
             Наши юристы проконсультируют по всем возникающим вопросам,
             подготовят документы для трудовой инспекции, комиссии, суда
             — заявления, ходатайства, справки, заключения, иски, отзывы и выполнят
@@ -113,24 +120,15 @@
             кодекса РФ, закона о защите прав потребителей, иных нормативных актов. При
             необходимости привлекаем к процессу экспертов.
           </div>
-          <div class="showcase__info showcase__info--large">
+          <div class="showcase__info showcase__info--large _dn">
             <b>Проконсультируем по телефону бесплатно!</b>
           </div>
-          <a href="#modal1" class="showcase__btn js-feedback">Записаться</a>
+          <a href="#modal1" class="showcase__btn js-feedback _dn">Записаться</a>
         </div>
       </div>
     </div>
 
-    <div class="showcase__block-btns">
-      <p class="showcase__btns-title">
-        Вы потребитель или продавец?
-      </p>
-      <div class="showcase__btns-wrapper">
-        <button class="showcase__btn showcase__btn--active" data-content="1">Я потребитель</button>
-        <button class="showcase__btn" data-content="2">Я продавец</button>
-      </div>
-    </div>
-    <section id="company" class="company company--mini-margins">
+    <section id="company" class="company company--mini-margins _dn">
       <div class="container">
         <div class="company__header">
           <h2 class="company__title">
@@ -167,11 +165,25 @@
               собрав большое количество документов и потратив много времени.
             </div>
           </div>
+          <div class="company__item company__item--false">
+            <div class="company__info">
+              Закон о защите прав потребителей регулирует отношения между поставщиками и покупателями. Бывают моменты,
+              когда юридическая поддержка нужна продавцам. Вот в каких случаях чаще всего она требуется:
+            </div>
+            <ul class="company__list">
+              <li>Борьба с потребительским экстремизмом – злоупотребление правом со стороны покупателей;</li>
+              <li>Защита продавцов при предъявлении к ним требований со стороны потребителей;</li>
+              <li>Корректировка правовой позиции продавцов для минимизации потерь и их недопущения.</li>
+            </ul>
+            <div class="company__btn-wrapper">
+              <a href="#modal1" class="company__btn showcase__btn js-feedback">Узнать больше</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="service" class="service service--mini-title">
+    <section id="service" class="service service--mini-title _dn">
       <div class="container">
         <h2 class="service__header">
           <span>Примеры дел</span>
@@ -220,7 +232,7 @@
       </div>
     </section>
 
-    <div class="team">
+    <div class="team _dn">
       <div class="container">
         <div class="team__item">
           <div class="team__block">
@@ -238,7 +250,7 @@
       </div>
     </div>
 
-    <div class="work">
+    <div class="work _dn">
       <div class="container">
         <h2 class="work__header">
           <span>Форматы работы</span>
@@ -308,7 +320,7 @@
       </div>
     </div>
 
-    <section id="price" class="price price--protection">
+    <section id="price" class="price price--protection _dn">
       <div class="container">
         <h2 class="price__title">Права покупателей</h2>
         <div class="price__text company__info">
@@ -345,9 +357,51 @@
           <a href="#modal1" class="service__btn showcase__btn js-feedback">Направить заявку</a>
         </div>
       </div>
+      <div class="container container--false">
+        <h2 class="price__title">Права продавца</h2>
+        <div class="price__items">
+          <div class="price__item">
+            <div class="price__name">При информировании потребителей: самостоятельно решить, каким образом это
+              сделать. Способы минимизации возникновения споров: заключение договора с покупателем с подробным описанием
+              правил безопасного использования товара, с изготовителем – о порядке предъявления претензии при
+              обнаружении бракованного изделия, маркировка товара с учетом возраста потребителей;</div>
+          </div>
+          <div class="price__item">
+            <div class="price__name">
+              При получении претензии: если способ разрешения конфликта не подходит, можно предложить изменить
+              требования (бесплатный ремонт товара вместо замены или возврата денег);
+            </div>
+          </div>
+          <div class="price__item">
+            <div class="price__name">
+              При обмене товара: проверьте сохранность пломб, ярлыков, наличие повреждений, потери товарного вида.
+              Пригласите свидетелей – коллег по цеху, например, сфотографируйте изделие.
+            </div>
+          </div>
+          <div class="price__text company__info price__text--margin-top">
+            Юридическое сопровождение продавца предполагает следующие действия:
+          </div>
+          <div class="price__item">
+            <div class="price__name">Подготовку заявлений, ходатайств, отзывов, ответов;</div>
+          </div>
+          <div class="price__item">
+            <div class="price__name">
+              Направление товара на экспертизу;
+            </div>
+          </div>
+          <div class="price__item">
+            <div class="price__name">
+              Представление интересов клиентов в суде.
+            </div>
+          </div>
+        </div>
+        <div class="service__btn-wrapper">
+          <a href="#modal1" class="service__btn showcase__btn js-feedback">Направить заявку</a>
+        </div>
+      </div>
     </section>
 
-    <section id="faq" class="faq">
+    <section id="faq" class="faq _dn">
       <div class="container">
         <h2 class="faq__title">Ответы на типовые вопросы</h2>
         <div class="faq__items">
@@ -522,10 +576,148 @@
             </div>
           </div>
         </div>
+        <div class="faq__items faq__items--false">
+          <div class="faq__item">
+            <div class="faq__header">
+              <div class="faq__name">
+                Какие права есть у потребителя?
+              </div>
+              <div class="faq__strong">
+                <svg width="24px" height="24px" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g stroke="none" stroke-width="1px" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                    <g transform="translate(1.000000, 1.000000)" stroke="#cf3535">
+                      <path d="M0,11 L22,11"></path>
+                      <path d="M11,0 L11,22"></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="faq__body">
+              Покупатель вправе приобрести безопасную продукцию надлежащего качества, получить информацию о ней, ее
+              производителе, а также потребовать возместить вред, который был причинен из-за бракованного товара.
+            </div>
+          </div>
+          <div class="faq__item">
+            <div class="faq__header">
+              <div class="faq__name">
+                Какие права есть у продавца?
+              </div>
+              <div class="faq__strong">
+                <svg width="24px" height="24px" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g stroke="none" stroke-width="1px" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                    <g transform="translate(1.000000, 1.000000)" stroke="#cf3535">
+                      <path d="M0,11 L22,11"></path>
+                      <path d="M11,0 L11,22"></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="faq__body">
+              Продавец имеет право не принимать товар из перечня не подлежащих возврату, а также технически сложные
+              устройства. Он вправе отказать в возврате уже бывшего в употреблении и товара после эксплуатации.
+            </div>
+          </div>
+          <div class="faq__item">
+            <div class="faq__header">
+              <div class="faq__name">
+                Как выполняется проверка качества товара?
+              </div>
+              <div class="faq__strong">
+                <svg width="24px" height="24px" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g stroke="none" stroke-width="1px" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                    <g transform="translate(1.000000, 1.000000)" stroke="#cf3535">
+                      <path d="M0,11 L22,11"></path>
+                      <path d="M11,0 L11,22"></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="faq__body">
+              Обязанность покупателя убедиться в качестве товара прописана в ст. 513 ГК РФ. Каким образом выполнить
+              операцию, зависит от вида изделия. Это могут быть проверка функционирования (лампочка светится, телефон
+              включается и загружается, телевизор показывает, холодильник охлаждает), визуальный осмотр, экспертиза.
+            </div>
+          </div>
+          <div class="faq__item">
+            <div class="faq__header">
+              <div class="faq__name">
+                Как выполняется замена товара на аналогичный?
+              </div>
+              <div class="faq__strong">
+                <svg width="24px" height="24px" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g stroke="none" stroke-width="1px" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                    <g transform="translate(1.000000, 1.000000)" stroke="#cf3535">
+                      <path d="M0,11 L22,11"></path>
+                      <path d="M11,0 L11,22"></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="faq__body">
+              Ст. 21 закона о защите прав потребителей установлены определенные сроки на замену товара после поступления
+              соответствующего обращения. Они зависят от характера повреждения, места нахождения продавца и покупателя,
+              иных факторов. В ряде случаев необходимо предоставить покупателю на время решения вопроса по замене товар
+              аналогичного качества.
+            </div>
+          </div>
+          <div class="faq__item">
+            <div class="faq__header">
+              <div class="faq__name">
+                Как реагировать на требования или претензию от потребителя?
+              </div>
+              <div class="faq__strong">
+                <svg width="24px" height="24px" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g stroke="none" stroke-width="1px" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                    <g transform="translate(1.000000, 1.000000)" stroke="#cf3535">
+                      <path d="M0,11 L22,11"></path>
+                      <path d="M11,0 L11,22"></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="faq__body">
+              Нужно спокойно принять претензию, заактировать процесс передачи товара, приложить к акту фото-,
+              видеоматериалы, показания свидетелей, иные документы, которые могут иметь значения в случае рассмотрения
+              дела в суде.
+            </div>
+          </div>
+          <div class="faq__item">
+            <div class="faq__header">
+              <div class="faq__name">
+                Может ли отсутствовать гарантия у товара?
+              </div>
+              <div class="faq__strong">
+                <svg width="24px" height="24px" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g stroke="none" stroke-width="1px" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                    <g transform="translate(1.000000, 1.000000)" stroke="#cf3535">
+                      <path d="M0,11 L22,11"></path>
+                      <path d="M11,0 L11,22"></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="faq__body">
+              Да, такое возможно. Тем не менее можно установить гарантию на товар на срок, не превышающий двух лет с
+              даты продажи или больший срок, если к нему придут стороны или это прописано законодательно.
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="review" class="review">
+    <section id="review" class="review _dn">
       <div class="container">
         <h2 class="review__header">
           <span>Отзывы</span>
@@ -548,7 +740,7 @@
       </div>
     </section>
 
-    <section id="contacts" class="contacts">
+    <section id="contacts" class="contacts _dn">
       <div class="container">
         <div class="contacts__items">
           <div class="contacts__item">
@@ -622,7 +814,6 @@
   </div>
 
   <script src="libs/jquery/jquery-3.2.1.min.js"></script>
-  <script src="libs/animsition.min.js"></script>
   <script src="libs/jquery.magnific-popup.js" type="text/javascript"></script>
   <script src="libs/jquery.maskedinput.min.js"></script>
   <script src="js/main.js"></script>

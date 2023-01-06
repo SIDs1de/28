@@ -1,28 +1,5 @@
 $(document).ready(function () {
 
-  $(".animsition").animsition({
-    inClass: 'fade-in-down-sm',
-    outClass: 'fade-out',
-    inDuration: 500,
-    outDuration: 200,
-    linkElement: '.animsition-link',
-    // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
-    loading: true,
-    loadingParentElement: 'body', //animsition wrapper element
-    loadingClass: 'animsition-loading',
-    loadingInner: '', // e.g '<img src="loading.svg" />'
-    timeout: false,
-    timeoutCountdown: 5000,
-    onLoadEvent: true,
-    browser: ['animation-duration', '-webkit-animation-duration'],
-    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
-    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
-    overlay: false,
-    overlayClass: 'animsition-overlay-slide',
-    overlayParentElement: 'body',
-    transition: function (url) { window.location.href = url; }
-  });
-
   $(".header__burger").click(function () {
     $(this).children().toggleClass("active");
     $(".header__item").toggleClass("active");
@@ -101,22 +78,49 @@ $(document).ready(function () {
   const replaceContent = () => {
     const btn = document.querySelector('.showcase__btns-wrapper .showcase__btn.showcase__btn--active');
     const num = parseInt(btn.getAttribute('data-content'));
+    const faqItems = document.querySelectorAll('.faq__items');
+    const companyItems = document.querySelectorAll('.company__item');
+    const pricesContainers = document.querySelectorAll('.price .container');
 
     if (num === 1) {
       document.querySelector('.company__title').innerHTML = `<p>Защита прав покупателей</p>`
+      faqItems[0].classList.remove('faq__items--false')
+      faqItems[1].classList.add('faq__items--false')
+      companyItems[0].classList.remove('company__item--false')
+      companyItems[1].classList.add('company__item--false')
+      pricesContainers[0].classList.remove('container--false')
+      pricesContainers[1].classList.add('container--false')
     } else {
-      document.querySelector('.company__title').innerHTML = `<p>Права продавца</p>`
+      document.querySelector('.company__title').innerHTML = `<p>Защита прав продавцов</p>`
+      faqItems[1].classList.remove('faq__items--false')
+      faqItems[0].classList.add('faq__items--false')
+      companyItems[1].classList.remove('company__item--false')
+      companyItems[0].classList.add('company__item--false')
+      pricesContainers[1].classList.remove('container--false')
+      pricesContainers[0].classList.add('container--false')
     }
   }
 
   const btns = document.querySelectorAll('.showcase__btns-wrapper .showcase__btn');
+  const dns = document.querySelectorAll('._dn');
   btns.forEach(btn => {
     btn.addEventListener('click', () => {
       btns.forEach(btn => {
         btn.classList.remove('showcase__btn--active')
       })
       btn.classList.add('showcase__btn--active')
+      dns.forEach(dn => {
+        dn.classList.remove('_dn')
+      })
       replaceContent();
     })
   })
 });
+
+
+/* <script src="//zero2one.ru/wp-content/player/playerjs.js" type="text/javascript"></script>
+<div id="player"></div>
+
+<script>
+   var player = new Playerjs({id:"player", file:"//www.youtube.com/watch?v=AU4xpodJgj4"});
+</script> */
