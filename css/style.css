@@ -2175,7 +2175,7 @@ button.mfp-close {
 }
 
 .showcase__block-btns {
-  align-items: start;
+	align-items: start;
 }
 
 @media (max-width: 430px) {
@@ -2224,9 +2224,9 @@ button.mfp-close {
 }
 
 @media (max-width: 767px) {
-  .showcase__block-btns {
-    align-items: center;
-  }
+	.showcase__block-btns {
+		align-items: center;
+	}
 }
 
 .protection .showcase__block {
@@ -2258,14 +2258,14 @@ button.mfp-close {
 
 .showcase__block-btns .showcase__btn {
 	border: 1px solid #cf3434;
-	color: #fff;
+	color: #000;
 	transition: 0.1s;
+	background: transparent;
 }
 
 .showcase__block-btns .showcase__btn--active {
-	background: none;
-	border: 1px solid #cf3434;
-	color: #000;
+	background: #cf3434;
+	color: #fff;
 }
 
 .company--mini-margins a.company__btn:hover {
@@ -2286,6 +2286,46 @@ button.mfp-close {
 .price__text--margin-top {
 	margin-top: 50px;
 	margin-bottom: 0;
+}
+
+.showcase__block-btns-title {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+.showcase__btns-wrapper {
+	display: flex;
+	gap: 15px;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.showcase__block-btns {
+	margin-top: 70px;
+	position: relative;
+	z-index: 20;
+}
+
+.showcase__block-btns .showcase__btn {
+	margin: 0;
+	width: 300px;
+}
+
+.protection .active-page {
+	color: #743b33;
+}
+
+.protection .showcase__btn {
+	background-color: #743b33;
+}
+
+.protection .showcase__block-btns .showcase__btn {
+	background: transparent;
+  border: 1px solid #743b33;
+}
+
+.protection .showcase__block-btns .showcase__btn--active {
+	background: #743b33;
 }
 
 /* SCROLLBAR */

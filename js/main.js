@@ -79,11 +79,13 @@ $(document).ready(function () {
     const btn = document.querySelector('.showcase__btns-wrapper .showcase__btn.showcase__btn--active');
     const num = parseInt(btn.getAttribute('data-content'));
     const faqItems = document.querySelectorAll('.faq__items');
+    const companyTitles = document.querySelectorAll('.company__title');
     const companyItems = document.querySelectorAll('.company__item');
     const pricesContainers = document.querySelectorAll('.price .container');
 
     if (num === 1) {
-      document.querySelector('.company__title').innerHTML = `<p>Защита прав покупателей</p>`
+      companyTitles[0].classList.remove('company__title--false')
+      companyTitles[1].classList.add('company__title--false')
       faqItems[0].classList.remove('faq__items--false')
       faqItems[1].classList.add('faq__items--false')
       companyItems[0].classList.remove('company__item--false')
@@ -91,7 +93,8 @@ $(document).ready(function () {
       pricesContainers[0].classList.remove('container--false')
       pricesContainers[1].classList.add('container--false')
     } else {
-      document.querySelector('.company__title').innerHTML = `<p>Защита прав продавцов</p>`
+      companyTitles[1].classList.remove('company__title--false')
+      companyTitles[0].classList.add('company__title--false')
       faqItems[1].classList.remove('faq__items--false')
       faqItems[0].classList.add('faq__items--false')
       companyItems[1].classList.remove('company__item--false')
