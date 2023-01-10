@@ -111,11 +111,19 @@ $(document).ready(function () {
       btns.forEach(btn => {
         btn.classList.remove('showcase__btn--active')
       })
-      btn.classList.add('showcase__btn--active')
+      const num = parseInt(btn.dataset.content);
+      const currentBtns = document.querySelectorAll(`.showcase__btns-wrapper .showcase__btn[data-content="${num}"]`);
+      currentBtns.forEach(cb => {
+        cb.classList.add('showcase__btn--active')
+      })
       dns.forEach(dn => {
         dn.classList.remove('_dn')
       })
-      document.querySelector('.showcase__btns-wrapper').classList.add('no-anim');
+      const wrappers = document.querySelectorAll('.showcase__btns-wrapper');
+      wrappers.forEach(wrapper => {
+        wrapper.classList.add('no-anim')
+        $('.mfp-close').click()
+      })
       replaceContent();
     })
   })
