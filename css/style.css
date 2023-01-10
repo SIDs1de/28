@@ -2165,11 +2165,7 @@ button.mfp-close {
 	}
 }
 
-.showcase__btns-title {
-	font-family: 'Orchidea Pro', Arial, sans-serif;
-}
-
-.showcase__btns-title {
+.showcase__block-btns-title {
 	font-weight: bold;
 	font-size: 24px;
 	margin-bottom: 15px;
@@ -2340,6 +2336,29 @@ button.mfp-close {
 	gap: 15px;
 	flex-wrap: wrap;
 	justify-content: center;
+  animation: btns 3s infinite;
+}
+
+.showcase__btns-wrapper.no-anim {
+  animation: 0;
+}
+
+@keyframes btns {
+  0% {
+    transform: translateX(0);
+  }
+  5% {
+    transform: translateX(10px);
+  }
+  10% {
+    transform: translateX(-8px);
+  }
+  15% {
+    transform: translateX(5px);
+  }
+  20% {
+    transform: translateX(0);
+  }
 }
 
 .showcase__block-btns {
@@ -2399,7 +2418,33 @@ button.mfp-close {
 @media (max-width: 390px) {
   .header__logo {
     min-width: 0px;
+    max-width: 120px; 
+    width: 100%;
   }
+  .header__logo img {
+    max-width: 100%;
+    width: 100% !important;
+  }
+}
+
+.hidden {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+#modal3 .popup_content {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+#modal3 {
+  min-height: 150px;
 }
 
 /* SCROLLBAR */
