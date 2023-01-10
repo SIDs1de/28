@@ -333,7 +333,7 @@ $('.js-feedback2').magnificPopup({
 if (document.querySelector('body').classList.contains('protection')) {
   const body = document.querySelector('body');
   window.addEventListener('scroll', (function () {
-    if (($(window).scrollTop() == $(document).height() - $(window).height())) {
+    if (window.pageYOffset == document.body.scrollHeight -  window.innerHeight) {
       if (!document.querySelector('.showcase__btn--active')) {
         if (!body.classList.contains('blocked')) {
           body.classList.add('blocked')
