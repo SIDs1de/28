@@ -331,12 +331,18 @@ $('.js-feedback2').magnificPopup({
 });
 
 if (document.querySelector('body').classList.contains('protection')) {
-  $(window).scroll(function () {
-    if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+  const body = document.querySelector('body');
+  window.addEventListener('scroll', (function () {
+    if (($(window).scrollTop() == $(document).height() - $(window).height())) {
       if (!document.querySelector('.showcase__btn--active')) {
-        showHelpingPopup();
+        if (!body.classList.contains('blocked')) {
+          body.classList.add('blocked')
+          showHelpingPopup();
+        }
       }
+    } else {
+      body.classList.remove('blocked')
     }
-  });
+  }));
 }
 
