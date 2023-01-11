@@ -330,10 +330,18 @@ $('.js-feedback2').magnificPopup({
   }
 });
 
+alert(12)
+
 if (document.querySelector('body').classList.contains('protection')) {
   const body = document.querySelector('body');
-  window.addEventListener('scroll', (function () {
-    if (window.pageYOffset == document.body.scrollHeight -  document.documentElement.clientHeight) {
+  window.addEventListener('scroll',  () => {
+    alert(1);
+    const btns = document.querySelectorAll('.showcase__block-btns .showcase__btn');
+    btns[0].innerHTML = window.pageYOffset;
+    btns[1].innerHTML = document.body.scrollHeight - document.documentElement.clientHeight;
+    console.log(window.pageYOffset);
+    console.log(document.body.scrollHeight - document.documentElement.clientHeight);
+    if (window.pageYOffset + document.documentElement.clientHeight >= document.body.scrollHeight) {
       if (!document.querySelector('.showcase__btn--active')) {
         if (!body.classList.contains('blocked')) {
           body.classList.add('blocked')
@@ -343,6 +351,6 @@ if (document.querySelector('body').classList.contains('protection')) {
     } else {
       body.classList.remove('blocked')
     }
-  }));
+  });
 }
 
