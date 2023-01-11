@@ -125,6 +125,12 @@ $(document).ready(function () {
         $('.mfp-close').click()
       })
       replaceContent();
+      const fromTop = document.querySelector('#company').offsetTop;
+      const headerSize = document.querySelector('.header').scrollHeight;
+      window.scroll({
+        top: fromTop - headerSize,
+        behavior: 'smooth'
+      })
     })
   })
 });
