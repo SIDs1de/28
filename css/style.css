@@ -2447,6 +2447,12 @@ button.mfp-close {
   min-height: 150px;
 }
 
+@media (max-width: 430px) {
+  .faq__body {
+    font-size: 14px;
+  }
+}
+
 /* SCROLLBAR */
 *::-webkit-scrollbar {
 	width: 12px; /* ширина scrollbar */

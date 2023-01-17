@@ -19,50 +19,6 @@ $(document).ready(function () {
     nav = $(".header"),
     nav_height = nav.outerHeight();
 
-  // $(window).on("scroll", function () {
-  //   var cur_pos = $(this).scrollTop();
-
-  //   sections.each(function () {
-  //     var top = $(this).offset().top - nav_height,
-  //       bottom = top + $(this).outerHeight();
-
-  //     if (cur_pos >= top && cur_pos <= bottom) {
-  //       nav.find("li a").removeClass("active");
-  //       sections.removeClass("active");
-
-  //       $(this).addClass("active");
-  //       nav.find('a[href="#' + $(this).attr("id") + '"]').addClass("active");
-  //     }
-  //   });
-  // });
-
-  // nav.find("a").on("click", function () {
-  //   var $el = $(this),
-  //     id = $el.attr("href");
-
-  //   $("html, body").animate(
-  //     {
-  //       scrollTop: $(id).offset().top - nav_height,
-  //     },
-  //     500
-  //   );
-
-  //   return false;
-  // });
-
-  // $(".footer__nav li a").on("click", function () {
-  //   var $el = $(this),
-  //     id = $el.attr("href");
-
-  //   $("html, body").animate(
-  //     {
-  //       scrollTop: $(id).offset().top - nav_height,
-  //     },
-  //     500
-  //   );
-
-  //   return false;
-  // });
 
   $(".header__nav li a").click(function () {
     $("body").removeClass("active");
@@ -78,29 +34,14 @@ $(document).ready(function () {
   const replaceContent = () => {
     const btn = document.querySelector('.showcase__btns-wrapper .showcase__btn.showcase__btn--active');
     const num = parseInt(btn.getAttribute('data-content'));
-    const faqItems = document.querySelectorAll('.faq__items');
-    const companyTitles = document.querySelectorAll('.company__title');
-    const companyItems = document.querySelectorAll('.company__item');
-    const pricesContainers = document.querySelectorAll('.price .container');
+    const types = document.querySelectorAll('.type');
 
     if (num === 1) {
-      companyTitles[0].classList.remove('company__title--false')
-      companyTitles[1].classList.add('company__title--false')
-      faqItems[0].classList.remove('faq__items--false')
-      faqItems[1].classList.add('faq__items--false')
-      companyItems[0].classList.remove('company__item--false')
-      companyItems[1].classList.add('company__item--false')
-      pricesContainers[0].classList.remove('container--false')
-      pricesContainers[1].classList.add('container--false')
+      types[0].classList.remove('type--false')
+      types[1].classList.add('type--false')
     } else {
-      companyTitles[1].classList.remove('company__title--false')
-      companyTitles[0].classList.add('company__title--false')
-      faqItems[1].classList.remove('faq__items--false')
-      faqItems[0].classList.add('faq__items--false')
-      companyItems[1].classList.remove('company__item--false')
-      companyItems[0].classList.add('company__item--false')
-      pricesContainers[1].classList.remove('container--false')
-      pricesContainers[0].classList.add('container--false')
+      types[1].classList.remove('type--false')
+      types[0].classList.add('type--false')
     }
   }
 
@@ -125,10 +66,11 @@ $(document).ready(function () {
         $('.mfp-close').click()
       })
       replaceContent();
-      const fromTop = document.querySelector('#company').offsetTop;
+      const fromTop1 = document.querySelector('#company1').offsetTop;
+      const fromTop2 = document.querySelector('#company2').offsetTop;
       const headerSize = document.querySelector('.header').scrollHeight;
       window.scroll({
-        top: fromTop - headerSize,
+        top: document.querySelectorAll('.type')[1].classList.contains('type--false') ? fromTop1 - headerSize : fromTop2 - headerSize,
         behavior: 'smooth'
       })
     })

@@ -334,7 +334,7 @@ if (document.querySelector('body').classList.contains('protection')) {
   const body = document.querySelector('body');
   window.addEventListener('scroll',  () => {
     const btns = document.querySelectorAll('.showcase__block-btns .showcase__btn');
-    if (window.pageYOffset + document.documentElement.clientHeight + 60 >= document.body.scrollHeight) {
+    if (window.pageYOffset + document.documentElement.clientHeight + 60 >= document.body.scrollHeight) { 
       if (!document.querySelector('.showcase__btn--active')) {
         if (!body.classList.contains('blocked')) {
           body.classList.add('blocked')
